@@ -10,4 +10,4 @@ pgd.Contractors,
 pgd.ConstrVal Cost_of_Construction,
 pgd.LandUse Land_Use
 	from Prmt p
-join PrmtGridData pgd on p.PrmtID = pgi.PrmtID
+join PrmtGridData pgd on p.PrmtID = pgd.PrmtID
