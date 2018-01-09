@@ -1,11 +1,12 @@
 # import packages and libraries
 import pyodbc
 import traceback
+import secrets
 
 # connect to LAMA database with username and password
 def connect():
     print("connecting...")
-    cnxn = pyodbc.connect('driver={ODBC Driver 13 for SQL Server};server=LAMASQL.townofchapelhill.org;database=LAMA;uid=CH\lamaquery;pwd=6nM%5vCtqYXCUP7udNH3')
+    cnxn = pyodbc.connect('driver={ODBC Driver 13 for SQL Server};server=LAMASQL.townofchapelhill.org;database=LAMA;uid=secrets.lamausername;pwd=secrets.lamapassword')
     print("connected.")
     cnxn.setencoding('utf-8')
     return cnxn
